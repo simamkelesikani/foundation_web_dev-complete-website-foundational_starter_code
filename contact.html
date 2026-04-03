@@ -1,30 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Simamkele Sikani - Web Developer</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="header">
-        <h1>Contact Me</h1>
-    </div>
-    
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            
-            <!-- Missing: labels, more input types, validation -->
-            
-            <button>Send</button>
-        </form>
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
+    <header class="header">
+        <h1>Simamkele Sikani - Web Developer</h1>
+        <h2>Contact</h2>
+        <nav aria-label="Main navigation" class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h2>Get In Touch</h2>
+            <div class="form-container">
+                <form action="#" method="post" class="contact_form">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="Enter your name" required
+                        minlength="2">
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number" required
+                        minlength="10" pattern="^0[6-8][0-9]{8}$">
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+
+                    <label for="service">Service Needed</label>
+                    <!-- Display this line of code as block element in CSS -->
+                    <select name="service" id="service" class="dis-block" required>
+                        <option value="">Please choose an option</option>
+                        <option value="web-design">Web Design</option>
+                        <option value="frontend-dev">Frontend Development</option>
+                        <option value="maintenance">Maintenance</option>
+                    </select>
+
+                    <label for="message">Message:</label>
+                    <!-- Display this line of code as block element in CSS -->
+                    <textarea name="message" id="message" placeholder="Message" class="dis-block"></textarea>
+
+                    <fieldset>
+                        <legend>Preferred Contact Method</legend>
+                        <input type="radio" id="contact_methd1" name="preferred-contact" value="email" required>
+                        <label for="contact_methd1">Email</label>
+                        <input type="radio" id="contact_methd2" name="preferred-contact" value="phone">
+                        <label for="contact_methd2">Phone</label>
+                    </fieldset>
+
+                    <input type="checkbox" id="contact-consent" name="consent" required>
+                    <label for="contact-consent">I agree to be contacted back</label>
+                    <!-- Display this line of code as block element in CSS -->
+                    <button class="dis-block" type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>
+            Contact me at
+            <a href="mailto:web.dev@gmail.com">web.dev@gmail.com</a> |
+            <a href="tel:+2712344567">071 234 4567</a>
+        </p>
+        <p>&copy; Simamkele Sikani 2026 All Rights Reserved.</p>
+    </footer>
 </body>
+
 </html>

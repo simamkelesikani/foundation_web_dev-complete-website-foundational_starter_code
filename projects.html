@@ -1,30 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Simamkele Sikani - Web Developer</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="header">
-        <h1>My Projects</h1>
-    </div>
-    
-    <div>
-        <h2>Project 1</h2>
-        <img src="images/project1.jpg">
-        <p>A responsive website built with HTML and CSS.</p>
-    </div>
-    
-    <div>
-        <h2>Project 2</h2>
-        <img src="images/project2.jpg">
-        <p>An e-commerce site with modern design.</p>
-    </div>
-    
-    <!-- Third project missing -->
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
+    <header class="header">
+        <h1>Simamkele Sikani - Web Developer</h1>
+        <h2>Projects</h2>
+        <nav aria-label="Main navigation" class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="My-projects">
+            <h2>My Projects</h2>
+            <div id="project-container">
+                <article class="project-card">
+                    <h3>Portfolio Website Project</h3>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/responsive-website.jpg"
+                            alt="Screenshot of a professional responsive website built with HTML and CSS"></a>
+                    <p>A responsive website built with HTML and CSS.
+                        I created a fully responsive portfolio homepage using semantic HTML5 elements and modern CSS
+                        techniques including Flexbox and Grid.
+                        The design adapts seamlessly across desktop, tablet, and mobile devices while maintaining
+                        excellent
+                        performance and accessibility standards.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Business Website Project</h3>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/An-e-commerce-site.jpg"
+                            alt="Screenshot of a modern e-commerce website"></a>
+                    <p>An e-commerce site with modern design.
+                        This project features a sleek product gallery, responsive navigation, and shopping experience
+                        built
+                        with CSS Grid and Flexbox.
+                        I focused on mobile-first design, smooth hover animations, clean typography, and an intuitive
+                        user
+                        interface that works perfectly on all screen sizes..</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>Task Management Dashboard Project</h3>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><img src="images/Task-manager-site.jpg"
+                            alt="Screenshot of Organizo - a modern productivity and task management dashboard built with HTML, CSS and JavaScript"></a>
+                    <p>A modern task management dashboard built with HTML, CSS and JavaScript.
+                        Organizo is an interactive productivity app featuring real-time task creation, drag-and-drop
+                        functionality, progress tracking, calendar view, and team collaboration elements.
+                        I implemented vanilla JavaScript for all interactivity, used CSS Grid and Flexbox for the
+                        responsive
+                        layout, added smooth animations, and ensured full keyboard accessibility with ARIA attributes.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            Contact me at
+            <a href="mailto:web.dev@gmail.com">web.dev@gmail.com</a> |
+            <a href="tel:+2712344567">071 234 4567</a>
+        </p>
+        <p>&copy; Simamkele Sikani 2026 All Rights Reserved.</p>
+    </footer>
 </body>
+
 </html>
