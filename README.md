@@ -1,4 +1,4 @@
-#Please note that all my work is on the 2second brancb my account can't aprrove me to merge
+# Please note that all my work is on the 2second branch my account can't aprrove me to merge
 
 
 # Portfolio Website Starter Code
