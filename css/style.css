@@ -1,65 +1,475 @@
-/* Basic styles with errors and omissions */
+:root {
+    /* Header */
+    --color-header-footer-bg: #000000;
+    --color-header-footer-text: #FFFFFF;
 
-body {
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
-    color: #333;
+    /* Backgrounds */
+    --color-bg: #0F1117;
+    --color-bg-section: #1C1F2E;
+    --color-bg-card: #21253A;
+
+    /* Accent */
+    --color-accent: #00D4AA;
+    --color-accent-hover: #00FFC6;
+    --color-accent-muted: #00D4AA22;
+
+    /* Text */
+    --color-text: #E2E8F0;
+    --color-text-muted: #8899AA;
+    --color-text-accent: #00FFC6;
+
+    /* Border */
+    --color-border: #2A3040;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* ==================== Header ==================== */
 .header {
-    background-color: #222;
-    color: white;
+    background-color: var(--color-header-footer-bg);
+    color: var(--color-header-footer-text);
     padding: 20px;
-    /* Missing: proper alignment */
+    text-align: center;
+    line-height: 1.5;
 }
 
 .header h1 {
-    margin: 0;
+    font-size: 45px;
 }
 
-/* Navigation styling missing completely */
+.header h2 {
+    font-size: 35px;
+}
 
-.hero {
+/* ==================== Website Top Position Content  ==================== */
+.hero,
+.profile,
+.My-projects,
+.contact {
     padding: 50px;
-    background-color: lightblue;
-    /* Poor colour contrast */
 }
 
-.hero h2 {
-    font-size: 36px;
-}
 
 .hero img {
     width: 100%;
-    /* Missing: alt text handled in HTML, but sizing issues here */
-}
-
-/* Missing: Only using 2-3 selector types, need 5+ */
-/* Missing: Pseudo-classes not used */
-/* Missing: Combination selectors not used */
-
-.intro {
-    padding: 30px;
-}
-
-/* Form styling incomplete */
-form input {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
     display: block;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
-/* Missing: Box model demonstration (margin, padding, border) */
-/* Missing: Block vs inline elements styling */
-/* Missing: Text and colour styling variety */
-/* Missing: Table styling */
+/* ==================== Navigation  ==================== */
+.menu ul {
+    list-style: none;
+    padding: 15px;
+}
 
-.footer {
-    background-color: gray;
+.menu ul>li {
+    display: inline;
+    margin-right: 25px;
+}
+
+.menu ul>li>a {
+    text-decoration: none;
     color: white;
-    padding: 20px;
-    /* Wrong alignment */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+main {
+    font-family: Arial;
+    background-color: #0F1117;
+    color: #E2E8F0;
+    line-height: 23px;
+
+}
+
+main h2 {
+    line-height: 1.3;
+    font-size: 26px;
+    padding-bottom: 15px;
+}
+
+
+main p {
+    margin: 50px 35px;
+    text-align: justify;
+}
+
+/* .about-preview,
+.featured-projects {
+    margin: 0 45px
+} */
+
+
+
+/* ==================== FEATURED PROJECTS CARDS ==================== */
+#ftproject-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    margin: 50px 35px;
+}
+
+
+#ftproject-container article {
+    background-color: #21253A;
+    border: 1px solid #2A3040;
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#ftproject-container article:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    border-color: #00D4AA;
+}
+
+#ftproject-container article img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Text inside cards */
+#ftproject-container article h3 {
+    margin: 15px 0 12px 0;
+    color: #E2E8F0;
+    font-size: 1.4rem;
+}
+
+#ftproject-container article p {
+    color: #8899AA;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 50px;
+}
+
+/* ==================== About Page  ==================== */
+.profile,
+.background {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.profile {
+    width: 22%;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.background {
+    width: 72%;
+    padding: 30px 20px;
+}
+
+.profile h2,
+.background h2,
+.skills h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    border: 3px solid var(--color-border);
+}
+
+.background p {
+    line-height: 1.7;
+    color: var(--color-text);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .profile,
+    .background {
+        display: block;
+        width: 100%;
+    }
+
+    .profile {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .background {
+        padding: 20px;
+    }
+
+    .background h2 {
+        margin-top: 10px;
+    }
+
+    .skills {
+        padding: 20px;
+    }
+
+    .skills-table {
+        font-size: 14px;
+    }
+}
+
+.skills {
+    width: 100%;
+    padding: 30px 20px;
+    clear: both;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--color-bg-card);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.skills-table caption {
+    caption-side: top;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--color-text);
     text-align: left;
 }
 
-/* Code quality issues: inconsistent spacing, poor naming, no comments */
+.skills-table th,
+.skills-table td {
+    border: 1px solid var(--color-border);
+    padding: 14px 18px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: var(--color-bg-section);
+    color: var(--color-text-accent);
+    font-weight: bold;
+}
+
+.skills-table tbody tr:hover {
+    background-color: var(--color-accent-muted);
+}
+
+/* ==================== Project Page ==================== */
+.My-projects {
+    padding: 50px 20px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.My-projects h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--color-text);
+}
+
+#project-container {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+#project-container::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-border);
+}
+
+.project-card {
+    position: relative;
+    margin-bottom: 40px;
+    padding: 20px 20px 20px 30px;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    left: -35px;
+    top: 28px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    border: 3px solid var(--color-bg);
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--color-text-accent);
+    line-height: 1.3;
+}
+
+.project-card a {
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+}
+
+.project-card p {
+    margin-top: 15px;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+
+.project-card:hover {
+    border-color: var(--color-accent);
+}
+
+.project-card a:hover img {
+    opacity: 0.9;
+}
+
+.contact {
+    padding: 50px 20px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+/* ==================== Contact Page ==================== */
+
+/* Center the form */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form layout */
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+.contact_form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Inputs, select, textarea */
+.contact_form input,
+.contact_form select,
+.contact_form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: var(--color-bg-card);
+    color: var(--color-text);
+    font-size: 15px;
+}
+
+/* Fix textarea height */
+.contact_form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Focus effect */
+.contact_form input:focus,
+.contact_form select:focus,
+.contact_form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+/* Fieldset */
+fieldset {
+    border: 1px solid var(--color-border);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+legend {
+    padding: 0 5px;
+    font-weight: 600;
+}
+
+/* Radio + checkbox spacing */
+fieldset input,
+#checkbox {
+    margin-right: 5px;
+}
+
+/* Button */
+.contact_form button {
+    background-color: var(--color-accent);
+    color: #000;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.contact_form button:hover {
+    background-color: var(--color-accent-hover);
+}
+
+/* Missing: Text and colour styling variety */
+
+.footer {
+    background-color: var(--color-header-footer-bg);
+    color: var(--color-header-footer-text);
+    padding: 50px;
+    /* Wrong alignment */
+    text-align: center;
+    /*to remove the space between main and footer*/
+    margin-top: -49px;
+    font-size: 17px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color-header-footer-text);
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color-header-footer-text);
+}
