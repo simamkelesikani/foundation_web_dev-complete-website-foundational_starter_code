@@ -1,28 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Simamkele Sikani - Web Developer</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="header">
-        <h1>My Portfolio</h1>
-        <!-- Navigation missing -->
-    </div>
-    
-    <div class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>I am a web developer passionate about creating beautiful websites.</p>
-        <img src="images/hero.jpg">
-    </div>
-    
-    <div class="intro">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
+    <header class="header">
+        <h1>Simamkele Sikani - Web Developer</h1>
+        <h2>Home</h2>
+        <nav aria-label="Main navigation" class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to My Portfolio</h2>
+            <p>I am a web developer passionate about creating beautiful, accessible and responsive websites. I focus on
+                delivering smooth user experiences, clean code, and modern designs that work perfectly on every device
+                while maintaining excellent performance and accessibility standards.</p>
+            <img src="images/neon-web-dev-laptop-wallpaper.jpg" alt="Modern neon laptop wallpaper for web developers">
+        </section>
+
+        <section class="about-preview">
+            <h2>About Me</h2>
+            <p>I build clean websites with HTML, CSS and JavaScript to bring client's ideas to life.
+                With strong attention to detail and a user-first mindset, I turn concepts into fully functional,
+                fast-loading websites that not only look great but also provide an intuitive and enjoyable experience
+                for every visitor.</p>
+        </section>
+
+        <section class="featured-projects">
+            <h2>Featured Projects</h2>
+            <div id="ftproject-container">
+                <article>
+                    <h3>Portfolio Website</h3>
+                    <a href="projects.html"><img src="images/responsive-website.jpg"
+                            alt="Screenshot of a professional responsive website built with HTML and CSS"></a>
+                    <p>A responsive modern portfolio homepage built with semantic HTML and CSS.
+                        It features a clean layout, smooth navigation, and fully responsive design that adapts
+                        beautifully
+                        across all screen sizes while maintaining excellent accessibility.</p>
+                </article>
+
+                <article>
+                    <h3>Business Website</h3>
+                    <a href="projects.html"><img src="images/An-e-commerce-site.jpg"
+                            alt="Screenshot of a modern e-commerce website"></a>
+                    <p>A professional modern e-commerce site.
+                        Built with a sleek, contemporary design, intuitive product browsing, shopping cart
+                        functionality,
+                        and responsive layout that provides an excellent shopping experience on desktop and mobile
+                        devices
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Task Management Dashboard</h3>
+                    <a href="projects.html"><img src="images/Task-manager-site.jpg"
+                            alt="Screenshot of Organizo - a modern productivity and task management dashboard built with HTML, CSS and JavaScript"></a>
+                    <p>A modern task management dashboard built with HTML, CSS and JavaScript.
+                        Organizo offers an intuitive interface with real-time task tracking, calendar integration,
+                        progress monitoring, and team collaboration features for better productivity.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>
+            Contact me at
+            <a href="mailto:web.dev@gmail.com">web.dev@gmail.com</a> |
+            <a href="tel:+2712344567">071 234 4567</a>
+        </p>
+        <p>&copy; Simamkele Sikani 2026 All Rights Reserved.</p>
+    </footer>
 </body>
+
 </html>
